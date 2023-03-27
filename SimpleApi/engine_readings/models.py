@@ -9,7 +9,7 @@ class Engine(models.Model):
     def __str__(self):
         return f'Motor: ({self.name})'
 
-class Readings(models.Model):
+class Reading(models.Model):
     objects = models.Manager()
     value = models.IntegerField()
     engine = models.ForeignKey(Engine, on_delete= models.CASCADE)
