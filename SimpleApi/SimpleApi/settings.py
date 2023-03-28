@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     # nueva app
     'rest_framework',
     'engine_readings',
+    'django_pandas',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'SimpleApi.urls'
@@ -124,3 +127,14 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# django-pandas
+USE_I18N = False
+
+
+CORS_ALLOW_METHODS = ['DELETE', 'GET', 'OPTIONS', 'PATCH', 'POST',    'PUT',]
+
+CORS_ALLOW_HEADERS = ['accept', 'accept-encoding', 'authorization',    'content-type',    'dnt',    'origin',    'user-agent',    'x-csrftoken',    'x-requested-with',]
+
+CORS_ORIGIN_WHITELIST = ['http://localhost:4200',]
+
