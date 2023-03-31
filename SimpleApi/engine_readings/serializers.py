@@ -8,7 +8,7 @@ Serializing all the books
 """
     class Meta:
         model = Reading
-        fields = ('id','value')
+        fields = ('id','MagV1','MagV2','MagV3')
 
 class EngineSerializer(serializers.ModelSerializer):
     """

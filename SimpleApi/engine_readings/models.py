@@ -11,7 +11,10 @@ class Engine(models.Model):
 
 class Reading(models.Model):
     objects = models.Manager()
-    value = models.IntegerField()
+    MagV1 = models.IntegerField()
+    MagV2 = models.IntegerField()
+    MagV3 = models.IntegerField()
+
     engine = models.ForeignKey(Engine, on_delete= models.CASCADE)
 
     def __str__(self):
